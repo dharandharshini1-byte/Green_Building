@@ -1,527 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoBuild Consultancy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBuild Consultancy</title>
 
-  <!-- Bootstrap 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-  />
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">
-        EcoBuild
-      </a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#benefits">Benefits</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#testimonials">Testimonials</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section d-flex align-items-center">
-    <div class="container">
-      <div class="row align-items-center">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="#">
+                EcoBuild
+            </a>
 
-        <div class="col-lg-6">
-          <div class="hero-content fade-up">
-            <span class="hero-badge">Sustainable • Innovative • Trusted</span>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <h1 class="hero-title">
-              Designing Greener Spaces for a Better Tomorrow
-            </h1>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-            <p class="hero-text">
-              EcoBuild Consultancy delivers premium green building solutions
-              focused on sustainability, energy efficiency, and modern
-              architectural excellence.
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+
+        <div class="overlay"></div>
+
+        <div class="container hero-content text-center">
+            <h1 data-aos="fade-up">Building a Sustainable Future</h1>
+
+            <p data-aos="fade-up" data-aos-delay="200">
+                Premium eco-friendly architecture and green building consultancy solutions.
             </p>
 
-            <div class="hero-buttons">
-              <a href="#contact" class="btn btn-success btn-lg custom-btn">
-                Get Consultation
-              </a>
-
-              <a href="#projects" class="btn btn-outline-dark btn-lg ms-3">
-                View Projects
-              </a>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="btn btn-green">Get Consultation</a>
+                <a href="#projects" class="btn btn-outline-light ms-3">Our Projects</a>
             </div>
-          </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="hero-image fade-up">
-            <img
-              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
-              alt="Modern sustainable building"
-              class="img-fluid rounded-4 shadow-lg"
-            />
-          </div>
-        </div>
+    </section>
 
-      </div>
+    <!-- Wave -->
+    <div class="wave">
+        <svg viewBox="0 0 1440 320">
+            <path fill="#f8f5ef" fill-opacity="1"
+                d="M0,160L80,170.7C160,181,320,203,480,202.7C640,203,800,181,960,170.7C1120,160,1280,160,1360,160L1440,160L1440,320L0,320Z"></path>
+        </svg>
     </div>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="section-padding">
-    <div class="container">
-      <div class="row align-items-center g-5">
+    <!-- About -->
+    <section id="about" class="py-5">
+        <div class="container">
 
-        <div class="col-lg-6 fade-up">
-          <img
-            src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
-            alt="Green architecture office"
-            class="img-fluid rounded-4"
-          />
-        </div>
+            <div class="row align-items-center">
 
-        <div class="col-lg-6 fade-up">
-          <div class="section-tag">About Us</div>
-
-          <h2 class="section-title">
-            Experts in Sustainable Building Consultancy
-          </h2>
-
-          <p class="section-text">
-            We help organizations, developers, and homeowners create
-            environmentally responsible buildings that combine functionality,
-            aesthetics, and long-term efficiency.
-          </p>
-
-          <p class="section-text">
-            Our consultancy focuses on green certifications, energy optimization,
-            eco-friendly materials, and climate-responsive design strategies.
-          </p>
-
-          <div class="about-features mt-4">
-            <div class="feature-item">
-              <i class="bi bi-check-circle-fill"></i>
-              LEED & IGBC Guidance
-            </div>
-
-            <div class="feature-item">
-              <i class="bi bi-check-circle-fill"></i>
-              Energy Efficient Design
-            </div>
-
-            <div class="feature-item">
-              <i class="bi bi-check-circle-fill"></i>
-              Sustainable Material Planning
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section-padding bg-light-custom">
-    <div class="container">
-
-      <div class="text-center mb-5 fade-up">
-        <div class="section-tag">Our Services</div>
-        <h2 class="section-title center-title">
-          Sustainable Solutions for Modern Infrastructure
-        </h2>
-      </div>
-
-      <div class="row g-4">
-
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="service-card">
-            <i class="bi bi-buildings"></i>
-            <h4>Green Building Design</h4>
-            <p>
-              Smart architectural planning with sustainability and efficiency
-              at the core.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="service-card">
-            <i class="bi bi-lightning-charge"></i>
-            <h4>Energy Optimization</h4>
-            <p>
-              Reduce energy consumption through intelligent building systems
-              and audits.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="service-card">
-            <i class="bi bi-tree"></i>
-            <h4>Environmental Consulting</h4>
-            <p>
-              Sustainable development strategies aligned with environmental
-              standards.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits -->
-  <section id="benefits" class="section-padding">
-    <div class="container">
-
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-6 fade-up">
-          <div class="section-tag">Why Green Buildings?</div>
-
-          <h2 class="section-title">
-            Long-Term Value Through Sustainability
-          </h2>
-
-          <div class="accordion custom-accordion" id="benefitsAccordion">
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseOne"
-                >
-                  Lower Operating Costs
-                </button>
-              </h2>
-
-              <div
-                id="collapseOne"
-                class="accordion-collapse collapse show"
-                data-bs-parent="#benefitsAccordion"
-              >
-                <div class="accordion-body">
-                  Green buildings reduce energy and water consumption,
-                  lowering long-term operational expenses.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                >
-                  Improved Indoor Environment
-                </button>
-              </h2>
-
-              <div
-                id="collapseTwo"
-                class="accordion-collapse collapse"
-                data-bs-parent="#benefitsAccordion"
-              >
-                <div class="accordion-body">
-                  Sustainable spaces improve air quality, comfort,
-                  productivity, and occupant wellbeing.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseThree"
-                >
-                  Future-Ready Investments
-                </button>
-              </h2>
-
-              <div
-                id="collapseThree"
-                class="accordion-collapse collapse"
-                data-bs-parent="#benefitsAccordion"
-              >
-                <div class="accordion-body">
-                  Eco-conscious developments improve brand value and
-                  attract environmentally aware investors.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-lg-6 fade-up">
-          <img
-            src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop"
-            alt="Eco friendly workspace"
-            class="img-fluid rounded-4"
-          />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section-padding bg-light-custom">
-    <div class="container">
-
-      <div class="text-center mb-5 fade-up">
-        <div class="section-tag">Featured Projects</div>
-        <h2 class="section-title center-title">
-          Sustainable Spaces We Helped Build
-        </h2>
-      </div>
-
-      <div class="row g-4">
-
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop"
-              alt="Eco residential project"
-              class="img-fluid"
-            />
-
-            <div class="project-content">
-              <h5>Eco Residential Villa</h5>
-              <p>
-                Net-zero inspired villa designed with passive cooling systems.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
-              alt="Commercial green office"
-              class="img-fluid"
-            />
-
-            <div class="project-content">
-              <h5>Green Corporate Office</h5>
-              <p>
-                Sustainable office infrastructure with energy-efficient systems.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 fade-up">
-          <div class="project-card">
-            <img
-              src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop"
-              alt="Sustainable public infrastructure"
-              class="img-fluid"
-            />
-
-            <div class="project-content">
-              <h5>Community Innovation Hub</h5>
-              <p>
-                Public infrastructure designed using sustainable construction practices.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="section-padding">
-    <div class="container">
-
-      <div class="text-center mb-5 fade-up">
-        <div class="section-tag">Testimonials</div>
-        <h2 class="section-title center-title">
-          Trusted by Forward-Thinking Clients
-        </h2>
-      </div>
-
-      <div class="row g-4">
-
-        <div class="col-lg-4 fade-up">
-          <div class="testimonial-card">
-            <p>
-              “EcoBuild transformed our commercial project into a highly efficient
-              and environmentally responsible workspace.”
-            </p>
-
-            <h6>— Sarah Williams</h6>
-          </div>
-        </div>
-
-        <div class="col-lg-4 fade-up">
-          <div class="testimonial-card">
-            <p>
-              “Professional guidance, excellent sustainability strategies,
-              and a premium design approach.”
-            </p>
-
-            <h6>— Daniel Joseph</h6>
-          </div>
-        </div>
-
-        <div class="col-lg-4 fade-up">
-          <div class="testimonial-card">
-            <p>
-              “Their green building expertise helped us achieve long-term
-              operational savings.”
-            </p>
-
-            <h6>— Priya Raman</h6>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section-padding contact-section">
-    <div class="container">
-
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-
-          <div class="contact-card fade-up">
-
-            <div class="text-center mb-4">
-              <div class="section-tag">Contact Us</div>
-
-              <h2 class="section-title center-title">
-                Start Your Sustainable Project
-              </h2>
-            </div>
-
-            <form>
-              <div class="row g-3">
-
-                <div class="col-md-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Your Name"
-                    required
-                  />
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200"
+                        class="img-fluid rounded-4 shadow-lg" alt="">
                 </div>
 
-                <div class="col-md-6">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Your Email"
-                    required
-                  />
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title">About Us</h2>
+
+                    <p>
+                        EcoBuild Consultancy specializes in sustainable architecture, energy-efficient building
+                        strategies, and eco-conscious infrastructure solutions for modern businesses.
+                    </p>
+
+                    <div class="row mt-4">
+
+                        <div class="col-md-4 text-center">
+                            <i class="fa-solid fa-leaf icon-box"></i>
+                            <h6>Eco Design</h6>
+                        </div>
+
+                        <div class="col-md-4 text-center">
+                            <i class="fa-solid fa-earth-asia icon-box"></i>
+                            <h6>Global Impact</h6>
+                        </div>
+
+                        <div class="col-md-4 text-center">
+                            <i class="fa-solid fa-recycle icon-box"></i>
+                            <h6>Recycling</h6>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="col-12">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Project Type"
-                  />
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Services</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="glass-card" data-aos="zoom-in">
+                        <i class="fa-solid fa-building"></i>
+                        <h4>Green Building Design</h4>
+                    </div>
                 </div>
 
-                <div class="col-12">
-                  <textarea
-                    class="form-control"
-                    rows="5"
-                    placeholder="Tell us about your project..."
-                  ></textarea>
+                <div class="col-md-4">
+                    <div class="glass-card" data-aos="zoom-in">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h4>LEED Certification</h4>
+                    </div>
                 </div>
 
-                <div class="col-12 text-center">
-                  <button class="btn btn-success custom-btn px-5">
-                    Send Inquiry
-                  </button>
+                <div class="col-md-4">
+                    <div class="glass-card" data-aos="zoom-in">
+                        <i class="fa-solid fa-bolt"></i>
+                        <h4>Energy Efficiency</h4>
+                    </div>
                 </div>
 
-              </div>
-            </form>
+                <div class="col-md-4">
+                    <div class="glass-card" data-aos="zoom-in">
+                        <i class="fa-solid fa-tree"></i>
+                        <h4>Sustainable Architecture</h4>
+                    </div>
+                </div>
 
-          </div>
+                <div class="col-md-4">
+                    <div class="glass-card" data-aos="zoom-in">
+                        <i class="fa-solid fa-droplet"></i>
+                        <h4>Water Conservation</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="glass-card" data-aos="zoom-in">
+                        <i class="fa-solid fa-cloud"></i>
+                        <h4>Carbon Analysis</h4>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
-      </div>
+    </section>
 
+    <!-- Why Choose Us -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title">Why Choose Us</h2>
+            </div>
+
+            <div class="row text-center">
+
+                <div class="col-md-4">
+                    <h2 class="counter" data-target="250">0</h2>
+                    <p>Projects Completed</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h2 class="counter" data-target="18">0</h2>
+                    <p>Years Experience</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h2 class="counter" data-target="98">0</h2>
+                    <p>Client Satisfaction</p>
+                </div>
+
+            </div>
+
+            <div class="mt-5">
+
+                <h6>Energy Efficiency</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                        style="width:95%">
+                    </div>
+                </div>
+
+                <h6>Sustainability</h6>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                        style="width:90%">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200"
+                        class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200"
+                        class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200"
+                        class="gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title">Testimonials</h2>
+            </div>
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="testimonial-card">
+                            <p>
+                                “Exceptional sustainable solutions with premium design quality.”
+                            </p>
+                            <h5>- Michael Johnson</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <p>
+                                “Their eco-consulting transformed our commercial building.”
+                            </p>
+                            <h5>- Sarah Williams</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="section-title">Contact Us</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+
+                    <form id="contactForm">
+
+                        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+
+                        <input type="email" class="form-control mb-3" placeholder="Email Address" required>
+
+                        <textarea class="form-control mb-3" rows="5" placeholder="Message"
+                            required></textarea>
+
+                        <button class="btn btn-green">Send Message</button>
+
+                    </form>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.219111802824!2d76.9558!3d11.0168"
+                        width="100%" height="350" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container text-center">
+
+            <h3>EcoBuild</h3>
+
+            <div class="social-icons my-3">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+
+            <p>© 2026 EcoBuild Consultancy. All Rights Reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- Chat Box -->
+    <div class="chatbox">
+        <i class="fa-solid fa-comments"></i>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <p>
-        © 2026 EcoBuild Consultancy. Sustainable Design for Modern Living.
-      </p>
+    <!-- Scroll Top -->
+    <button id="topBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200"
+                    class="img-fluid">
+            </div>
+        </div>
     </div>
-  </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JS -->
-  <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>

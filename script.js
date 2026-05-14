@@ -1,44 +1,82 @@
-// Scroll Animation
-
-const fadeElements = document.querySelectorAll(".fade-up");
-
-const showOnScroll = () => {
-  fadeElements.forEach((element) => {
-    const position = element.getBoundingClientRect().top;
-    const screenPosition = window.innerHeight - 100;
-
-    if (position < screenPosition) {
-      element.classList.add("active");
-    }
-  });
-};
-
-window.addEventListener("scroll", showOnScroll);
-
-showOnScroll();
-
-// Navbar Background on Scroll
-
-const navbar = document.querySelector(".custom-navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    navbar.style.padding = "10px 0";
-    navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,0.08)";
-  } else {
-    navbar.style.padding = "15px 0";
-    navbar.style.boxShadow = "none";
-  }
+// Loader
+window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
 });
 
-// Smooth Scroll
+// AOS
+AOS.init({
+    duration: 1000
+});
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
+// Navbar Scroll
+window.addEventListener("scroll", function () {
+
+    let navbar = document.querySelector(".custom-navbar");
+
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+
+});
+
+// Counter Animation
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+
+        const target = +counter.getAttribute('data-target');
+
+        const c = +counter.innerText;
+
+        const increment = target / 100;
+
+        if (c < target) {
+
+            counter.innerText = `${Math.ceil(c + increment)}`;
+
+            setTimeout(updateCounter, 20);
+
+        } else {
+
+            counter.innerText = target;
+
+        }
+    };
+
+    updateCounter();
+});
+
+// Scroll Top Button
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+
+        topBtn.style.display = "block";
+
+    } else {
+
+        topBtn.style.display = "none";
+    }
+});
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+// Form Validation
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+
     e.preventDefault();
 
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
-    });
-  });
+    alert("Message Sent Successfully!");
+
 });
